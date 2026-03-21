@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',system-ui,sans-serif;padding:0;background:transparent;font-size:14px;line-height:1.6;overflow:hidden}
+body.dark{color:#E0E0E0}
+body.light{color:#1C1B1F}
+#content{padding:0}
+#content p{margin-bottom:6px}
+#content ul,#content ol{margin-left:20px;margin-bottom:6px}
+#content li{margin-bottom:2px}
+#content strong,#content b{font-weight:700}
+#content code{background:rgba(128,128,128,0.15);padding:1px 4px;border-radius:3px;font-size:13px}
+#content table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}
+#content th,#content td{border:1px solid rgba(128,128,128,0.3);padding:6px 8px;text-align:left}
+#content th{background:rgba(128,128,128,0.1);font-weight:700}
+#content hr{border:none;border-top:1px solid rgba(128,128,128,0.3);margin:12px 0}
+.katex{font-size:1.05em}
+.katex-display{margin:6px 0;overflow-x:auto;overflow-y:hidden}
+.katex-display>.katex{text-align:left}
+</style>
+</head>
+<body class="dark">
+<div id="content"></div>
+<script>
+var katexOk=false,markedOk=false,arOk=false;
+var pText=null,pDark=true;
+var cdnFailed=false;
+
+function updateContent(t,d){
+  pText=t;pDark=d;
+  if(katexOk&&markedOk&&arOk){
+    doRender();
+  } else if(cdnFailed){
+    doFallbackRender();
+  }
+}
+
+function chk(){
+  if(katexOk&&markedOk&&arOk&&pText!==null)doRender();
+}
+
+// If CDN hasn't loaded after 5s, show plain text as fallback
+setTimeout(function(){
+  if(!(katexOk&&markedOk&&arOk)){
+    cdnFailed=true;
+    if(pText!==null)doFallbackRender();
+  }
+},5000);
+
+function doFallbackRender(){
+  document.body.className=pDark?'dark':'light';
+  var t=pText;
+  t=t.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  t=t.replace(/\n/g,'<br>');
+  document.getElementById('content').innerHTML=t;
+  setTimeout(function(){
+    if(window.Android)Android.onHeightChanged(document.getElementById('content').scrollHeight);
+  },50);
+}
+
+function doRender(){
+  document.body.className=pDark?'dark':'light';
+  var t=pText;
+
+  // Strip control characters that result from backslash corruption
+  // \t(0x09)->tab, \v(0x0B)->vtab, \f(0x0C)->formfeed, \b(0x08)->backspace
+  // Recover: control char + partial command → \command
+  t=t.replace(/\x08(ar\{)/g,'\\b$1');    // \b + ar{ → \bar{
+  t=t.replace(/\x09(ext\b)/g,'\\t$1');   // \t + ext → \text
+  t=t.replace(/\x09(heta\b)/g,'\\t$1');  // \t + heta → \theta
+  t=t.replace(/\x09(au\b)/g,'\\t$1');    // \t + au → \tau
+  t=t.replace(/\x09(imes\b)/g,'\\t$1');  // \t + imes → \times
+  t=t.replace(/\x09(ilde\{)/g,'\\t$1');  // \t + ilde{ → \tilde{
+  t=t.replace(/\x09(an\b)/g,'\\t$1');    // \t + an → \tan
+  t=t.replace(/\x0B(ec\{)/g,'\\v$1');    // \v + ec{ → \vec{
+  t=t.replace(/\x0C(rac\{)/g,'\\f$1');   // \f + rac{ → \frac{
+  t=t.replace(/\n(abla\b)/g,'\\n$1');    // \n + abla → \nabla
+  t=t.replace(/\n(eq\b)/g,'\\n$1');      // \n + eq → \neq
+  t=t.replace(/\n(u\b)/g,'\\n$1');       // \n + u → \nu
+  // Strip any remaining control chars (except newline)
+  t=t.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g,'');
+
+  // Strip garbled Unicode from model output (CJK, Korean, box-drawing, etc.)
+  t=t.replace(/[\u2500-\u259F\u2E80-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/g,'');
+
+  // Fix LaTeX commands missing backslash (common model artifact)
+  // Commands followed by { — very safe, these are never valid English words before {
+  t=t.replace(/(?<!\\)(vec|frac|text|hat|bar|dot|ddot|tilde|sqrt|overline|underline|mathbf|mathrm|mathit|mathcal|mathbb|operatorname|textbf|textit)\{/g,'\\$1{');
+  // Fix \left and \right missing backslash
+  t=t.replace(/(?<!\\)(left|right)([(\[|)\]|])/g,'\\$1$2');
+  // Fix Greek letters and common commands missing backslash (word-boundary safe)
+  t=t.replace(/(?<!\\)\b(theta|alpha|beta|gamma|delta|epsilon|lambda|mu|nu|sigma|omega|pi|phi|psi|rho|tau|eta|zeta|kappa|xi|chi|infty|partial|nabla|cdot|times|quad|qquad|neq|leq|geq|approx|equiv|pm|mp|sin|cos|tan|cot|sec|csc|log|ln|lim|sum|prod|int)\b(?=[\s_^{$\d\\,.])/g,'\\$1');
+
+  // Fix common AI-generated broken LaTeX
+  // 1. Fix double subscripts like R_1_1 -> R_{1,1}
+  t=t.replace(/([A-Za-z])_(\w)_(\w)/g,'$1_{$2,$3}');
+  // 2. Balance unclosed braces in math blocks
+  t=t.replace(/(\$\$[\s\S]+?\$\$)/g,function(block){return balanceBraces(block)});
+  t=t.replace(/(\$[^\$\n]+?\$)/g,function(block){return balanceBraces(block)});
+  // 3. Truncate degenerate repetitive patterns (frac chains)
+  t=t.replace(/(\{\\frac\{[^}]*\}\{[^}]*\}){3,}/g,'$1');
+
+  // Close trailing unclosed math delimiters (streaming partial LaTeX)
+  // Handle unclosed $$ first
+  var ddCount=(t.match(/\$\$/g)||[]).length;
+  if(ddCount%2===1) t+='$$';
+  // Handle unclosed $ (after $$ are balanced)
+  var stripped=t.replace(/\$\$[\s\S]+?\$\$/g,'');
+  var sCount=(stripped.match(/\$/g)||[]).length;
+  if(sCount%2===1) t+='$';
+  // Handle unclosed \( and \[
+  var openParen=(t.match(/\\\(/g)||[]).length-(t.match(/\\\)/g)||[]).length;
+  if(openParen>0) t+='\\)';
+  var openBracket=(t.match(/\\\[/g)||[]).length-(t.match(/\\\]/g)||[]).length;
+  if(openBracket>0) t+='\\]';
+
+  // Sanitize HTML tags from AI output (but preserve pipe chars for tables)
+  t=t.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  // Protect math blocks from markdown
+  var m=[];
+  t=t.replace(/\$\$([\s\S]+?)\$\$/g,function(x){m.push(x);return'\x00M'+(m.length-1)+'\x00'});
+  t=t.replace(/\$([^\$\n]+?)\$/g,function(x){m.push(x);return'\x00M'+(m.length-1)+'\x00'});
+  // Parse markdown (with tables enabled)
+  try{t=marked.parse(t,{breaks:true,gfm:true})}catch(e){t='<p>'+t.replace(/\n/g,'<br>')+'</p>'}
+  // Restore math blocks (unescape &lt; &gt; inside them)
+  t=t.replace(/\x00M(\d+)\x00/g,function(_,i){
+    return m[parseInt(i)].replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+  });
+  document.getElementById('content').innerHTML=t;
+  try{renderMathInElement(document.getElementById('content'),{delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false},
+    {left:'\\(',right:'\\)',display:false},
+    {left:'\\[',right:'\\]',display:true}
+  ],throwOnError:false})}catch(e){}
+  setTimeout(function(){
+    if(window.Android)Android.onHeightChanged(document.getElementById('content').scrollHeight);
+  },100);
+}
+
+function balanceBraces(s){
+  var o=0;
+  for(var i=0;i<s.length;i++){if(s[i]==='{')o++;if(s[i]==='}')o--;}
+  if(o>0){for(var j=0;j<o;j++)s+='}';}
+  if(o<0){s=s.substring(0,s.lastIndexOf('}'));}
+  return s;
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" onload="katexOk=true;chk()"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="arOk=true;chk()"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.4/marked.min.js" onload="markedOk=true;chk()"></script>
+</body>
+</html>
