@@ -1,0 +1,220 @@
+{
+  "version": 2,
+  "questions": [
+    {"topicId": 1, "questionText": "A block of mass 2 kg is placed on a frictionless surface. A force of 10 N is applied. The acceleration is:", "optionA": "5 m/s\u00b2", "optionB": "10 m/s\u00b2", "optionC": "2 m/s\u00b2", "optionD": "20 m/s\u00b2", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 1, "questionText": "The dimension of impulse is same as that of:", "optionA": "Force", "optionB": "Momentum", "optionC": "Energy", "optionD": "Power", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 1, "questionText": "A car of mass 1000 kg moving at 20 m/s is brought to rest in 10 s. The retarding force is:", "optionA": "1000 N", "optionB": "2000 N", "optionC": "500 N", "optionD": "4000 N", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 2, "questionText": "A particle moves along x-axis with velocity v = 3t\u00b2 - 6t + 2 m/s. The displacement in time 0 to 3 s is:", "optionA": "0 m", "optionB": "3 m", "optionC": "2 m", "optionD": "5 m", "correctAnswer": "C", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 2, "questionText": "A ball is thrown vertically upward with velocity 20 m/s from a 40 m building. Time to hit ground (g=10):", "optionA": "2 s", "optionB": "4 s", "optionC": "2(1+\u221a2) s", "optionD": "4(1+\u221a2) s", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 2, "questionText": "A projectile is fired at 30\u00b0 with horizontal at 40 m/s. Maximum height reached (g=10) is:", "optionA": "20 m", "optionB": "40 m", "optionC": "60 m", "optionD": "80 m", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 3, "questionText": "A body of mass 5 kg is acted upon by two perpendicular forces 8 N and 6 N. The acceleration is:", "optionA": "2 m/s\u00b2", "optionB": "1.6 m/s\u00b2", "optionC": "2.8 m/s\u00b2", "optionD": "10 m/s\u00b2", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 3, "questionText": "A lift accelerates upward at 2 m/s\u00b2. The apparent weight of a 50 kg person inside (g=10) is:", "optionA": "400 N", "optionB": "500 N", "optionC": "600 N", "optionD": "700 N", "correctAnswer": "C", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 3, "questionText": "Two blocks of 3 kg and 2 kg connected by string on frictionless surface. Force of 10 N applied on 3 kg. Tension in string:", "optionA": "4 N", "optionB": "6 N", "optionC": "2 N", "optionD": "8 N", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 4, "questionText": "A body of mass 2 kg falls from height 5 m. Its kinetic energy on reaching ground (g=10) is:", "optionA": "50 J", "optionB": "100 J", "optionC": "200 J", "optionD": "25 J", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 4, "questionText": "A spring of constant 200 N/m is compressed by 0.1 m. The PE stored is:", "optionA": "1 J", "optionB": "2 J", "optionC": "0.5 J", "optionD": "10 J", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 4, "questionText": "A pump lifts 100 kg of water to 10 m height in 5 s. Power of pump (g=10) is:", "optionA": "1000 W", "optionB": "2000 W", "optionC": "5000 W", "optionD": "500 W", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 5, "questionText": "Moment of inertia of a solid sphere of mass M and radius R about its diameter is:", "optionA": "2MR\u00b2/5", "optionB": "MR\u00b2/2", "optionC": "2MR\u00b2/3", "optionD": "MR\u00b2", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 5, "questionText": "A disc of radius R rolls without slipping. Ratio of translational to rotational KE is:", "optionA": "1:1", "optionB": "2:1", "optionC": "1:2", "optionD": "3:1", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 5, "questionText": "Angular momentum of a particle is conserved when:", "optionA": "Force is zero", "optionB": "Torque is zero", "optionC": "Energy is conserved", "optionD": "Linear momentum is conserved", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 6, "questionText": "Acceleration due to gravity at height h = R (radius of Earth) from surface is:", "optionA": "g/2", "optionB": "g/4", "optionC": "g", "optionD": "g/3", "correctAnswer": "B", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 6, "questionText": "Escape velocity of a body from Earth is v. From a planet of mass 4M and radius 2R, escape velocity is:", "optionA": "v", "optionB": "\u221a2 v", "optionC": "2v", "optionD": "v/2", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 6, "questionText": "Orbital velocity of a satellite near Earth's surface (R=6400 km, g=10) is approximately:", "optionA": "8 km/s", "optionB": "11.2 km/s", "optionC": "3.2 km/s", "optionD": "16 km/s", "correctAnswer": "A", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 7, "questionText": "A wire of length L and area A extends by l under force F. Young's modulus is:", "optionA": "FL/Al", "optionB": "Fl/AL", "optionC": "FA/Ll", "optionD": "Al/FL", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 7, "questionText": "Water rises to height h in a capillary of radius r. In a capillary of radius 2r, it rises to:", "optionA": "h/2", "optionB": "2h", "optionC": "h", "optionD": "h/4", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 7, "questionText": "The excess pressure inside a soap bubble of radius r and surface tension T is:", "optionA": "2T/r", "optionB": "4T/r", "optionC": "T/r", "optionD": "T/2r", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 8, "questionText": "In an isothermal process, internal energy of an ideal gas:", "optionA": "Increases", "optionB": "Decreases", "optionC": "Remains constant", "optionD": "First increases then decreases", "correctAnswer": "C", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 8, "questionText": "Efficiency of a Carnot engine operating between 600K and 300K is:", "optionA": "25%", "optionB": "50%", "optionC": "75%", "optionD": "100%", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 8, "questionText": "In adiabatic process, PV^\u03b3 = constant. For a monoatomic gas, \u03b3 is:", "optionA": "5/3", "optionB": "7/5", "optionC": "4/3", "optionD": "3/2", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 9, "questionText": "RMS speed of gas molecules is proportional to:", "optionA": "T", "optionB": "\u221aT", "optionC": "T\u00b2", "optionD": "1/T", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 9, "questionText": "Mean free path of a gas molecule depends on:", "optionA": "Temperature only", "optionB": "Pressure only", "optionC": "Both temperature and pressure", "optionD": "Neither", "correctAnswer": "C", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 9, "questionText": "Degrees of freedom for a diatomic gas at room temperature:", "optionA": "3", "optionB": "5", "optionC": "6", "optionD": "7", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 10, "questionText": "Time period of a simple pendulum of length L on a planet where g is doubled:", "optionA": "T", "optionB": "T\u221a2", "optionC": "T/\u221a2", "optionD": "2T", "correctAnswer": "C", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 10, "questionText": "Two waves of frequencies 256 Hz and 260 Hz are sounded together. Beat frequency is:", "optionA": "4 Hz", "optionB": "516 Hz", "optionC": "8 Hz", "optionD": "2 Hz", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 10, "questionText": "Speed of sound in air at 0\u00b0C is 332 m/s. At 273\u00b0C it will be approximately:", "optionA": "332 m/s", "optionB": "470 m/s", "optionC": "664 m/s", "optionD": "166 m/s", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 11, "questionText": "Two point charges +q and -q at distance d. Electric field at midpoint:", "optionA": "Zero", "optionB": "4kq/d\u00b2 toward -q", "optionC": "4kq/d\u00b2 toward +q", "optionD": "8kq/d\u00b2 toward -q", "correctAnswer": "D", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+    {"topicId": 11, "questionText": "Electric potential at center of a uniformly charged ring of charge Q and radius R:", "optionA": "kQ/R", "optionB": "kQ/R\u00b2", "optionC": "Zero", "optionD": "kQ/2R", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 11, "questionText": "Energy stored in a capacitor of 10 \u03bcF charged to 100 V:", "optionA": "0.05 J", "optionB": "0.5 J", "optionC": "5 J", "optionD": "0.005 J", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+
+    {"topicId": 12, "questionText": "Three resistors of 3\u03a9 each connected in parallel. Equivalent resistance:", "optionA": "1 \u03a9", "optionB": "3 \u03a9", "optionC": "9 \u03a9", "optionD": "0.33 \u03a9", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 12, "questionText": "A cell of EMF 2V and internal resistance 1\u03a9 drives current through 3\u03a9. Current is:", "optionA": "0.5 A", "optionB": "1 A", "optionC": "2 A", "optionD": "0.67 A", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 12, "questionText": "In a Wheatstone bridge, balanced condition is P/Q = R/S. If P=2, Q=4, S=8, then R:", "optionA": "4", "optionB": "16", "optionC": "2", "optionD": "8", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 13, "questionText": "Magnetic field at center of a circular loop of radius R carrying current I:", "optionA": "\u03bc\u2080I/2R", "optionB": "\u03bc\u2080I/R", "optionC": "\u03bc\u2080I/4\u03c0R", "optionD": "2\u03bc\u2080I/R", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 13, "questionText": "Force per unit length between two parallel wires carrying currents I\u2081 and I\u2082 separated by d:", "optionA": "\u03bc\u2080I\u2081I\u2082/2\u03c0d", "optionB": "\u03bc\u2080I\u2081I\u2082/4\u03c0d", "optionC": "\u03bc\u2080I\u2081I\u2082/d", "optionD": "\u03bc\u2080I\u2081I\u2082/2d", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 13, "questionText": "A charged particle enters a uniform magnetic field perpendicular to it. Its path is:", "optionA": "Straight line", "optionB": "Parabola", "optionC": "Circle", "optionD": "Helix", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 14, "questionText": "A coil of 100 turns has flux change of 0.01 Wb in 0.1 s. Induced EMF is:", "optionA": "10 V", "optionB": "1 V", "optionC": "100 V", "optionD": "0.1 V", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 14, "questionText": "Self-inductance of a solenoid of 1000 turns, length 1 m, area 10 cm\u00b2 is:", "optionA": "0.126 mH", "optionB": "1.26 mH", "optionC": "12.6 mH", "optionD": "126 mH", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 14, "questionText": "In an LR circuit, time constant \u03c4 is:", "optionA": "L/R", "optionB": "R/L", "optionC": "LR", "optionD": "\u221a(L/R)", "correctAnswer": "A", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 15, "questionText": "Focal length of a convex lens is 20 cm. Power of the lens is:", "optionA": "+5 D", "optionB": "-5 D", "optionC": "+2 D", "optionD": "-2 D", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 15, "questionText": "In Young's double slit experiment, fringe width \u03b2 = \u03bbD/d. If D is doubled and d is halved:", "optionA": "\u03b2 doubles", "optionB": "\u03b2 quadruples", "optionC": "\u03b2 halves", "optionD": "\u03b2 unchanged", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 15, "questionText": "Critical angle for total internal reflection from glass (\u03bc=\u221a2) to air is:", "optionA": "30\u00b0", "optionB": "45\u00b0", "optionC": "60\u00b0", "optionD": "90\u00b0", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 16, "questionText": "De Broglie wavelength of electron accelerated through 100V is approximately:", "optionA": "0.123 nm", "optionB": "1.23 nm", "optionC": "12.3 nm", "optionD": "0.0123 nm", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+    {"topicId": 16, "questionText": "Work function of a metal is 4 eV. Threshold wavelength for photoelectric effect:", "optionA": "310 nm", "optionB": "620 nm", "optionC": "155 nm", "optionD": "1240 nm", "correctAnswer": "A", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 16, "questionText": "Half-life of a radioactive substance is 10 days. Fraction remaining after 30 days:", "optionA": "1/8", "optionB": "1/4", "optionC": "1/2", "optionD": "1/16", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+
+    {"topicId": 17, "questionText": "In a p-n junction diode, depletion region is formed due to:", "optionA": "Drift of charges", "optionB": "Diffusion of charges", "optionC": "Both drift and diffusion", "optionD": "Recombination only", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 17, "questionText": "In a full-wave rectifier using 2 diodes, output frequency for 50 Hz input:", "optionA": "50 Hz", "optionB": "100 Hz", "optionC": "25 Hz", "optionD": "200 Hz", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 17, "questionText": "For an NPN transistor in active mode:", "optionA": "Both junctions forward biased", "optionB": "Both reverse biased", "optionC": "Base-emitter forward, base-collector reverse", "optionD": "Base-emitter reverse, base-collector forward", "correctAnswer": "C", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 101, "questionText": "Number of radial nodes for 3p orbital:", "optionA": "0", "optionB": "1", "optionC": "2", "optionD": "3", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 101, "questionText": "Maximum number of electrons in a shell with n=3:", "optionA": "8", "optionB": "18", "optionC": "32", "optionD": "9", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 101, "questionText": "de Broglie wavelength is given by \u03bb = h/mv. If velocity is doubled, wavelength:", "optionA": "Doubled", "optionB": "Halved", "optionC": "Same", "optionD": "Quadrupled", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 102, "questionText": "Among these, the molecule with highest dipole moment:", "optionA": "CO\u2082", "optionB": "CH\u2084", "optionC": "NH\u2083", "optionD": "H\u2082O", "correctAnswer": "D", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 102, "questionText": "Hybridization of carbon in ethylene (C\u2082H\u2084):", "optionA": "sp", "optionB": "sp\u00b2", "optionC": "sp\u00b3", "optionD": "sp\u00b3d", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 102, "questionText": "Bond order of O\u2082 molecule is:", "optionA": "1", "optionB": "2", "optionC": "3", "optionD": "1.5", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 103, "questionText": "Among Li, Na, K, Rb \u2014 which has the smallest ionic radius?", "optionA": "Li\u207a", "optionB": "Na\u207a", "optionC": "K\u207a", "optionD": "Rb\u207a", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 103, "questionText": "Electron affinity is maximum for:", "optionA": "F", "optionB": "Cl", "optionC": "Br", "optionD": "I", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 103, "questionText": "Ionization energy order: Li, Be, B, C is:", "optionA": "Li<B<Be<C", "optionB": "B<Li<Be<C", "optionC": "Li<Be<B<C", "optionD": "B<Li<C<Be", "correctAnswer": "A", "difficulty": "Hard", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 104, "questionText": "At STP, the volume of 1 mole of ideal gas is:", "optionA": "22.4 L", "optionB": "11.2 L", "optionC": "44.8 L", "optionD": "2.24 L", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 104, "questionText": "Van der Waals constant 'a' is a measure of:", "optionA": "Molecular size", "optionB": "Intermolecular attraction", "optionC": "Temperature", "optionD": "Volume", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 104, "questionText": "Boyle's temperature is the temperature at which a real gas behaves like:", "optionA": "Van der Waals gas", "optionB": "Ideal gas", "optionC": "Solid", "optionD": "Liquid", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 105, "questionText": "For an exothermic reaction, \u0394H is:", "optionA": "Positive", "optionB": "Negative", "optionC": "Zero", "optionD": "Cannot determine", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 105, "questionText": "At constant pressure, heat absorbed equals:", "optionA": "\u0394U", "optionB": "\u0394H", "optionC": "\u0394G", "optionD": "\u0394S", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 105, "questionText": "Gibbs free energy for a spontaneous process is:", "optionA": "\u0394G > 0", "optionB": "\u0394G < 0", "optionC": "\u0394G = 0", "optionD": "Cannot say", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 106, "questionText": "For N\u2082+3H\u2082 \u21cc 2NH\u2083, Kp = 1.6\u00d710\u207b\u2074 at 400\u00b0C. Kc relates to Kp by:", "optionA": "Kc = Kp(RT)\u00b2", "optionB": "Kc = Kp/(RT)\u00b2", "optionC": "Kc = Kp", "optionD": "Kc = Kp(RT)", "correctAnswer": "A", "difficulty": "Hard", "year": 2023, "examType": "Mains"},
+    {"topicId": 106, "questionText": "pH of 0.01 M HCl solution is:", "optionA": "1", "optionB": "2", "optionC": "3", "optionD": "0.01", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 106, "questionText": "Buffer solution is obtained by mixing:", "optionA": "Strong acid + strong base", "optionB": "Weak acid + its conjugate base", "optionC": "Two strong acids", "optionD": "Two weak acids", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 107, "questionText": "In the reaction 2FeCl\u2083 + SnCl\u2082 \u2192 2FeCl\u2082 + SnCl\u2084, the reducing agent is:", "optionA": "FeCl\u2083", "optionB": "SnCl\u2082", "optionC": "FeCl\u2082", "optionD": "SnCl\u2084", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 107, "questionText": "Oxidation number of Mn in KMnO\u2084 is:", "optionA": "+2", "optionB": "+4", "optionC": "+7", "optionD": "+6", "correctAnswer": "C", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 107, "questionText": "In a disproportionation reaction, the same element is:", "optionA": "Only oxidized", "optionB": "Only reduced", "optionC": "Both oxidized and reduced", "optionD": "Neither", "correctAnswer": "C", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 108, "questionText": "IUPAC name of CH\u2083-CH=CH-CHO:", "optionA": "But-2-enal", "optionB": "But-3-enal", "optionC": "2-Butenal", "optionD": "But-2-en-1-al", "correctAnswer": "D", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+    {"topicId": 108, "questionText": "Inductive effect is:", "optionA": "Permanent effect", "optionB": "Temporary effect", "optionC": "Resonance effect", "optionD": "Hyperconjugation", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 108, "questionText": "Electrophile is a species that is:", "optionA": "Electron rich", "optionB": "Electron deficient", "optionC": "Neutral always", "optionD": "None of these", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+
+    {"topicId": 109, "questionText": "Markovnikov's rule applies to addition of HBr to:", "optionA": "Ethene", "optionB": "Propene", "optionC": "Ethyne", "optionD": "Methane", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 109, "questionText": "Benzene undergoes electrophilic substitution because:", "optionA": "It has sigma bonds", "optionB": "It has delocalized \u03c0 electrons", "optionC": "It has lone pairs", "optionD": "It is aliphatic", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 109, "questionText": "Anti-Markovnikov addition of HBr to propene gives:", "optionA": "2-bromopropane", "optionB": "1-bromopropane", "optionC": "1,2-dibromopropane", "optionD": "Propanol", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 110, "questionText": "Lucas reagent (ZnCl\u2082 + HCl) reacts fastest with:", "optionA": "Primary alcohol", "optionB": "Secondary alcohol", "optionC": "Tertiary alcohol", "optionD": "All equally", "correctAnswer": "C", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 110, "questionText": "Phenol is more acidic than ethanol because:", "optionA": "Phenol has higher molecular weight", "optionB": "Phenoxide ion is stabilized by resonance", "optionC": "Phenol has OH group", "optionD": "Ethanol has CH\u2083 group", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 110, "questionText": "Williamson synthesis is used to prepare:", "optionA": "Alcohols", "optionB": "Ethers", "optionC": "Aldehydes", "optionD": "Ketones", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 111, "questionText": "Tollens' reagent is a test for:", "optionA": "Ketones", "optionB": "Aldehydes", "optionC": "Alcohols", "optionD": "Ethers", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 111, "questionText": "Acidity order: formic acid > acetic acid > propionic acid is due to:", "optionA": "+I effect of alkyl groups", "optionB": "-I effect of alkyl groups", "optionC": "Resonance", "optionD": "Hyperconjugation", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 111, "questionText": "Aldol condensation occurs between two molecules of:", "optionA": "Aldehyde without \u03b1-hydrogen", "optionB": "Aldehyde with \u03b1-hydrogen", "optionC": "Carboxylic acid", "optionD": "Ester", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 112, "questionText": "Coordination number of Fe in [Fe(CN)\u2086]\u00b3\u207b is:", "optionA": "4", "optionB": "6", "optionC": "3", "optionD": "2", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 112, "questionText": "IUPAC name of K\u2084[Fe(CN)\u2086]:", "optionA": "Potassium hexacyanoferrate(II)", "optionB": "Potassium hexacyanoferrate(III)", "optionC": "Potassium ferrocyanide", "optionD": "Potassium ferricyanide", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 112, "questionText": "Crystal field splitting energy is higher for:", "optionA": "Weak field ligands", "optionB": "Strong field ligands", "optionC": "Neutral ligands", "optionD": "All same", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 113, "questionText": "Standard electrode potential of hydrogen electrode is:", "optionA": "1 V", "optionB": "0 V", "optionC": "-1 V", "optionD": "0.5 V", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 113, "questionText": "In electrolysis of CuSO\u2084 solution with Cu electrodes, Cu is deposited at:", "optionA": "Anode", "optionB": "Cathode", "optionC": "Both", "optionD": "Neither", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 113, "questionText": "Molar conductivity of a strong electrolyte at infinite dilution can be obtained by:", "optionA": "Extrapolation", "optionB": "Kohlrausch's law", "optionC": "Ohm's law", "optionD": "Faraday's law", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 114, "questionText": "For a first-order reaction, half-life is:", "optionA": "Proportional to initial concentration", "optionB": "Independent of initial concentration", "optionC": "Inversely proportional to concentration", "optionD": "Proportional to k", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 114, "questionText": "Unit of rate constant for a second-order reaction:", "optionA": "s\u207b\u00b9", "optionB": "mol\u207b\u00b9 L s\u207b\u00b9", "optionC": "mol L\u207b\u00b9 s\u207b\u00b9", "optionD": "mol\u207b\u00b2 L\u00b2 s\u207b\u00b9", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 114, "questionText": "Activation energy can be determined from:", "optionA": "Rate law", "optionB": "Arrhenius equation", "optionC": "Equilibrium constant", "optionD": "Le Chatelier's principle", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 115, "questionText": "Adsorption of gas on solid surface is generally:", "optionA": "Endothermic", "optionB": "Exothermic", "optionC": "Neither", "optionD": "Depends on gas", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 115, "questionText": "Tyndall effect is observed in:", "optionA": "True solutions", "optionB": "Colloidal solutions", "optionC": "Suspensions", "optionD": "Pure solvents", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 115, "questionText": "Gold sol is an example of:", "optionA": "Multimolecular colloid", "optionB": "Macromolecular colloid", "optionC": "Associated colloid", "optionD": "Lyophilic colloid", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 116, "questionText": "Which of the following is a noble gas?", "optionA": "Nitrogen", "optionB": "Oxygen", "optionC": "Argon", "optionD": "Chlorine", "correctAnswer": "C", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 116, "questionText": "Ozone (O\u2083) has a bond angle of approximately:", "optionA": "180\u00b0", "optionB": "120\u00b0", "optionC": "117\u00b0", "optionD": "109.5\u00b0", "correctAnswer": "C", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 116, "questionText": "Among halogens, the most electronegative element is:", "optionA": "Cl", "optionB": "F", "optionC": "Br", "optionD": "I", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 117, "questionText": "Transition metals show variable oxidation states because of:", "optionA": "s electrons only", "optionB": "Incomplete d orbitals", "optionC": "Complete d orbitals", "optionD": "f electrons", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 117, "questionText": "Which transition metal has the highest melting point?", "optionA": "Iron", "optionB": "Tungsten", "optionC": "Copper", "optionD": "Zinc", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 117, "questionText": "Lanthanide contraction is due to:", "optionA": "Poor shielding of 4f electrons", "optionB": "Good shielding of 3d electrons", "optionC": "Addition of s electrons", "optionD": "Loss of p electrons", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 118, "questionText": "Sucrose on hydrolysis gives:", "optionA": "2 glucose", "optionB": "Glucose + fructose", "optionC": "2 fructose", "optionD": "Glucose + galactose", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 118, "questionText": "Natural rubber is a polymer of:", "optionA": "Ethylene", "optionB": "Isoprene", "optionC": "Butadiene", "optionD": "Styrene", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 118, "questionText": "DNA contains which sugar?", "optionA": "Ribose", "optionB": "Deoxyribose", "optionC": "Glucose", "optionD": "Fructose", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 201, "questionText": "If A = {1,2,3} and B = {2,3,4}, then A \u2229 B =", "optionA": "{1,2,3,4}", "optionB": "{2,3}", "optionC": "{1}", "optionD": "{4}", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 201, "questionText": "A function f: A\u2192B is bijective if it is:", "optionA": "One-one only", "optionB": "Onto only", "optionC": "Both one-one and onto", "optionD": "Neither", "correctAnswer": "C", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 201, "questionText": "Number of subsets of a set with n elements:", "optionA": "n", "optionB": "2n", "optionC": "2^n", "optionD": "n\u00b2", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 202, "questionText": "If z = (1+i)/(1-i), then z\u2074 equals:", "optionA": "1", "optionB": "-1", "optionC": "i", "optionD": "-i", "correctAnswer": "A", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+    {"topicId": 202, "questionText": "Modulus of 3 + 4i is:", "optionA": "7", "optionB": "5", "optionC": "1", "optionD": "25", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 202, "questionText": "The argument of -1 + i is:", "optionA": "\u03c0/4", "optionB": "3\u03c0/4", "optionC": "-\u03c0/4", "optionD": "\u03c0/2", "correctAnswer": "B", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+
+    {"topicId": 203, "questionText": "Sum of roots of 2x\u00b2 - 5x + 3 = 0:", "optionA": "5/2", "optionB": "3/2", "optionC": "-5/2", "optionD": "2/5", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 203, "questionText": "If roots are equal, discriminant D equals:", "optionA": "D > 0", "optionB": "D < 0", "optionC": "D = 0", "optionD": "D = 1", "correctAnswer": "C", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 203, "questionText": "Product of roots of 3x\u00b2 + 7x - 6 = 0:", "optionA": "-2", "optionB": "2", "optionC": "-7/3", "optionD": "7/3", "correctAnswer": "A", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 204, "questionText": "Number of ways to arrange 5 books on a shelf:", "optionA": "25", "optionB": "120", "optionC": "60", "optionD": "10", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 204, "questionText": "C(10,3) equals:", "optionA": "120", "optionB": "720", "optionC": "60", "optionD": "30", "correctAnswer": "A", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 204, "questionText": "Number of diagonals of a polygon with 8 sides:", "optionA": "20", "optionB": "28", "optionC": "40", "optionD": "8", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 205, "questionText": "Coefficient of x\u00b3 in expansion of (1+x)\u2076:", "optionA": "15", "optionB": "20", "optionC": "6", "optionD": "10", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 205, "questionText": "Number of terms in expansion of (a+b)^10:", "optionA": "10", "optionB": "11", "optionC": "9", "optionD": "12", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 205, "questionText": "Middle term in expansion of (x+1)^8:", "optionA": "T\u2084", "optionB": "T\u2085", "optionC": "T\u2083", "optionD": "T\u2086", "correctAnswer": "B", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 206, "questionText": "Sum of first 10 terms of AP: 2, 5, 8, 11...:", "optionA": "155", "optionB": "145", "optionC": "120", "optionD": "165", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 206, "questionText": "Sum of infinite GP: 1, 1/2, 1/4, 1/8...:", "optionA": "1", "optionB": "2", "optionC": "\u221e", "optionD": "1/2", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 206, "questionText": "If a, b, c are in GP, then b\u00b2 =", "optionA": "a+c", "optionB": "ac", "optionC": "(a+c)/2", "optionD": "a\u00b2+c\u00b2", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 207, "questionText": "If A is 3\u00d73 matrix with |A| = 5, then |adj A| =", "optionA": "5", "optionB": "25", "optionC": "125", "optionD": "1/5", "correctAnswer": "B", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 207, "questionText": "Determinant of a 2\u00d72 identity matrix:", "optionA": "0", "optionB": "1", "optionC": "2", "optionD": "-1", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 207, "questionText": "If A is an orthogonal matrix, then A\u00b7A^T =", "optionA": "A", "optionB": "A\u00b2", "optionC": "I", "optionD": "0", "correctAnswer": "C", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 208, "questionText": "lim(x\u21920) sin(x)/x =", "optionA": "0", "optionB": "1", "optionC": "\u221e", "optionD": "Does not exist", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 208, "questionText": "lim(x\u21920) (e^x - 1)/x =", "optionA": "0", "optionB": "1", "optionC": "e", "optionD": "\u221e", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 208, "questionText": "A function is continuous at x=a if:", "optionA": "f(a) exists", "optionB": "Limit exists", "optionC": "Both exist and are equal", "optionD": "f is differentiable", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 209, "questionText": "If y = sin\u207b\u00b9(2x\u221a(1-x\u00b2)), then dy/dx is:", "optionA": "1/\u221a(1-x\u00b2)", "optionB": "2/\u221a(1-x\u00b2)", "optionC": "-2/\u221a(1-x\u00b2)", "optionD": "2/\u221a(1-4x\u00b2)", "correctAnswer": "B", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 209, "questionText": "Derivative of e^(3x) is:", "optionA": "e^(3x)", "optionB": "3e^(3x)", "optionC": "e^(3x)/3", "optionD": "3xe^(3x)", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 209, "questionText": "d/dx(x^x) equals:", "optionA": "x^x", "optionB": "x\u00b7x^(x-1)", "optionC": "x^x(1+ln x)", "optionD": "x^x \u00b7 ln x", "correctAnswer": "C", "difficulty": "Hard", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 210, "questionText": "\u222b\u2080^\u03c0 x\u00b7sin(x) dx =", "optionA": "\u03c0", "optionB": "2\u03c0", "optionC": "\u03c0/2", "optionD": "0", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 210, "questionText": "\u222b 1/x dx =", "optionA": "x\u00b2/2", "optionB": "ln|x| + C", "optionC": "1/x\u00b2 + C", "optionD": "-1/x\u00b2 + C", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 210, "questionText": "\u222b\u2080\u00b9 x\u00b2 dx =", "optionA": "1", "optionB": "1/2", "optionC": "1/3", "optionD": "2/3", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 211, "questionText": "Order of the differential equation d\u00b2y/dx\u00b2 + 3(dy/dx)\u00b2 = x:", "optionA": "1", "optionB": "2", "optionC": "3", "optionD": "0", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 211, "questionText": "Degree of (dy/dx)\u00b3 + d\u00b2y/dx\u00b2 = 0 is:", "optionA": "1", "optionB": "2", "optionC": "3", "optionD": "Not defined", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 211, "questionText": "Integrating factor of dy/dx + 2y = e^x is:", "optionA": "e^(2x)", "optionB": "e^x", "optionC": "e^(-2x)", "optionD": "2x", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 212, "questionText": "Distance between points (1,2) and (4,6):", "optionA": "5", "optionB": "7", "optionC": "3", "optionD": "25", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 212, "questionText": "Midpoint of (2,4) and (6,8) is:", "optionA": "(3,5)", "optionB": "(4,6)", "optionC": "(8,12)", "optionD": "(2,2)", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 212, "questionText": "Area of triangle with vertices (0,0), (3,0), (0,4):", "optionA": "12", "optionB": "6", "optionC": "7", "optionD": "24", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 213, "questionText": "Slope of line 3x + 4y = 12:", "optionA": "3/4", "optionB": "-3/4", "optionC": "4/3", "optionD": "-4/3", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 213, "questionText": "Distance of point (3,4) from line 3x + 4y - 5 = 0:", "optionA": "4", "optionB": "5", "optionC": "20/5", "optionD": "20", "correctAnswer": "C", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 213, "questionText": "Two lines are perpendicular if product of their slopes is:", "optionA": "0", "optionB": "1", "optionC": "-1", "optionD": "\u221e", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 214, "questionText": "Eccentricity of a circle is:", "optionA": "1", "optionB": "0", "optionC": ">1", "optionD": "<1 but >0", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 214, "questionText": "Equation of parabola with focus at (2,0) and directrix x = -2:", "optionA": "y\u00b2 = 8x", "optionB": "y\u00b2 = 4x", "optionC": "x\u00b2 = 8y", "optionD": "y\u00b2 = 2x", "correctAnswer": "A", "difficulty": "Medium", "year": 2022, "examType": "Mains"},
+    {"topicId": 214, "questionText": "Length of latus rectum of ellipse x\u00b2/25 + y\u00b2/16 = 1:", "optionA": "32/5", "optionB": "25/4", "optionC": "16/5", "optionD": "50/4", "correctAnswer": "A", "difficulty": "Medium", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 215, "questionText": "Distance between points (1,2,3) and (4,6,3):", "optionA": "5", "optionB": "7", "optionC": "3", "optionD": "25", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 215, "questionText": "Direction cosines of x-axis:", "optionA": "(0,0,1)", "optionB": "(1,0,0)", "optionC": "(0,1,0)", "optionD": "(1,1,1)", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 215, "questionText": "Equation of xy-plane is:", "optionA": "x = 0", "optionB": "y = 0", "optionC": "z = 0", "optionD": "x + y = 0", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 216, "questionText": "If a = 2i + 3j + k, magnitude of a:", "optionA": "\u221a14", "optionB": "6", "optionC": "\u221a6", "optionD": "14", "correctAnswer": "A", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 216, "questionText": "Cross product of parallel vectors is:", "optionA": "Maximum", "optionB": "Zero vector", "optionC": "Unit vector", "optionD": "Undefined", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 216, "questionText": "Dot product of perpendicular vectors is:", "optionA": "1", "optionB": "-1", "optionC": "0", "optionD": "Maximum", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 217, "questionText": "P(A) = 0.4, P(B) = 0.3, P(A\u2229B) = 0.1, then P(A'\u2229B'):", "optionA": "0.2", "optionB": "0.4", "optionC": "0.6", "optionD": "0.3", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+    {"topicId": 217, "questionText": "A dice is thrown twice. Probability of getting sum 7:", "optionA": "1/6", "optionB": "5/36", "optionC": "7/36", "optionD": "1/12", "correctAnswer": "A", "difficulty": "Medium", "year": 2023, "examType": "Mains"},
+    {"topicId": 217, "questionText": "If events A and B are independent, P(A\u2229B) =", "optionA": "P(A) + P(B)", "optionB": "P(A) \u00d7 P(B)", "optionC": "P(A) - P(B)", "optionD": "P(A)/P(B)", "correctAnswer": "B", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+
+    {"topicId": 218, "questionText": "Mean of first 10 natural numbers:", "optionA": "5", "optionB": "5.5", "optionC": "10", "optionD": "55", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 218, "questionText": "Variance is always:", "optionA": "Negative", "optionB": "Zero", "optionC": "Non-negative", "optionD": "Positive", "correctAnswer": "C", "difficulty": "Easy", "year": 2022, "examType": "Mains"},
+    {"topicId": 218, "questionText": "Standard deviation is the square root of:", "optionA": "Mean", "optionB": "Median", "optionC": "Variance", "optionD": "Mode", "correctAnswer": "C", "difficulty": "Easy", "year": 2024, "examType": "Mains"},
+
+    {"topicId": 219, "questionText": "General solution of sin(2x) = cos(3x):", "optionA": "n\u03c0 + \u03c0/10", "optionB": "n\u03c0/5 + \u03c0/10 or n\u03c0 - \u03c0/2", "optionC": "2n\u03c0 \u00b1 \u03c0/10", "optionD": "n\u03c0 + (-1)^n\u00b7\u03c0/10", "correctAnswer": "B", "difficulty": "Hard", "year": 2022, "examType": "Mains"},
+    {"topicId": 219, "questionText": "Value of sin(30\u00b0) + cos(60\u00b0):", "optionA": "0", "optionB": "1", "optionC": "1/2", "optionD": "\u221a3", "correctAnswer": "B", "difficulty": "Easy", "year": 2023, "examType": "Mains"},
+    {"topicId": 219, "questionText": "sin\u00b2\u03b8 + cos\u00b2\u03b8 =", "optionA": "0", "optionB": "1", "optionC": "2", "optionD": "sin(2\u03b8)", "correctAnswer": "B", "difficulty": "Easy", "year": 2024, "examType": "Mains"}
+  ]
+}
