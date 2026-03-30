@@ -40,7 +40,11 @@ object SubScreen {
     const val SUBJECT_NOTES = "notes/subject/{subjectId}"
     const val TOPIC_NOTES = "notes/{topicId}"
     const val MEMORY_TRICKS = "tricks/{topicId}"
+    const val PYQ_YEARS = "pyq_years"
+    const val PYQ_PAPER = "pyq_paper/{year}/{examType}"
     const val MODEL_DOWNLOAD = "model_download"
+    const val CHAT = "chat/{questionId}"
+    const val MISTAKE_JOURNAL = "mistake_journal"
 }
 
 val bottomBarScreens = listOf(Screen.Home, Screen.Practice, Screen.Notes, Screen.Progress)
