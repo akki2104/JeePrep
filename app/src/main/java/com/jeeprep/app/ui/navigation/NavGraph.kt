@@ -18,6 +18,10 @@ import com.jeeprep.app.ui.screens.progress.ProgressScreen
 import com.jeeprep.app.ui.screens.mocktest.MockTestScreen
 import com.jeeprep.app.ui.screens.mocktest.MockResultScreen
 import com.jeeprep.app.ui.screens.download.ModelDownloadScreen
+import com.jeeprep.app.ui.screens.pyq.PYQYearsScreen
+import com.jeeprep.app.ui.screens.pyq.PYQPaperScreen
+import com.jeeprep.app.ui.screens.chat.ChatScreen
+import com.jeeprep.app.ui.screens.mistakes.MistakeJournalScreen
 
 @Composable
 fun JeePrepNavHost(
@@ -29,27 +33,37 @@ fun JeePrepNavHost(
         startDestination = Screen.Home.route,
         modifier = modifier
     ) {
+        // Bottom bar screens
         composable(Screen.Home.route) {
             HomeScreen(navController = navController)
         }
+
         composable(Screen.Practice.route) {
             PracticeScreen(navController = navController)
         }
+
         composable(Screen.Notes.route) {
             NotesScreen(navController = navController)
         }
+
         composable(Screen.Progress.route) {
             ProgressScreen(
                 onNavigatePremium = { navController.navigate(SubScreen.PREMIUM) }
             )
         }
+
+        // Sub-screens
         composable(
             route = SubScreen.TOPIC_LIST,
             arguments = listOf(navArgument("subjectId") { type = NavType.IntType })
         ) { backStackEntry ->
             val subjectId = backStackEntry.arguments?.getInt("subjectId") ?: 1
-            TopicListScreen(subjectId = subjectId, navController = navController)
+            TopicListScreen(
+                subjectId = subjectId,
+                navController = navController
+            )
         }
+
         composable(
             route = SubScreen.QUESTION_SESSION,
             arguments = listOf(
@@ -59,38 +73,95 @@ fun JeePrepNavHost(
         ) { backStackEntry ->
             val subjectId = backStackEntry.arguments?.getInt("subjectId") ?: 1
             val topicId = backStackEntry.arguments?.getInt("topicId") ?: 1
-            QuestionSessionScreen(subjectId = subjectId, topicId = topicId, navController = navController)
+            QuestionSessionScreen(
+                subjectId = subjectId,
+                topicId = topicId,
+                navController = navController
+            )
         }
+
         composable(
             route = SubScreen.TOPIC_NOTES,
             arguments = listOf(navArgument("topicId") { type = NavType.IntType })
         ) { backStackEntry ->
             val topicId = backStackEntry.arguments?.getInt("topicId") ?: 1
-            TopicNotesScreen(topicId = topicId, navController = navController)
+            TopicNotesScreen(
+                topicId = topicId,
+                navController = navController
+            )
         }
+
         composable(
             route = SubScreen.SUBJECT_NOTES,
             arguments = listOf(navArgument("subjectId") { type = NavType.IntType })
         ) { backStackEntry ->
             val subjectId = backStackEntry.arguments?.getInt("subjectId") ?: 1
-            SubjectNotesScreen(subjectId = subjectId, navController = navController)
+            SubjectNotesScreen(
+                subjectId = subjectId,
+                navController = navController
+            )
         }
+
         composable(
             route = SubScreen.MOCK_TEST,
             arguments = listOf(navArgument("testId") { type = NavType.LongType })
         ) { backStackEntry ->
             val testId = backStackEntry.arguments?.getLong("testId") ?: 0L
-            MockTestScreen(testId = testId, navController = navController)
+            MockTestScreen(
+                testId = testId,
+                navController = navController
+            )
         }
+
         composable(
             route = SubScreen.MOCK_RESULT,
             arguments = listOf(navArgument("testId") { type = NavType.LongType })
         ) { backStackEntry ->
             val testId = backStackEntry.arguments?.getLong("testId") ?: 0L
-            MockResultScreen(testId = testId, navController = navController)
+            MockResultScreen(
+                testId = testId,
+                navController = navController
+            )
         }
+
         composable(SubScreen.MODEL_DOWNLOAD) {
             ModelDownloadScreen(navController = navController)
         }
+
+        composable(SubScreen.PYQ_YEARS) {
+            PYQYearsScreen(navController = navController)
+        }
+
+        composable(
+            route = SubScreen.PYQ_PAPER,
+            arguments = listOf(
+                navArgument("year") { type = NavType.IntType },
+                navArgument("examType") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+            val year = backStackEntry.arguments?.getInt("year") ?: 2024
+            val examType = backStackEntry.arguments?.getString("examType") ?: "Mains"
+            PYQPaperScreen(
+                year = year,
+                examType = examType,
+                navController = navController
+            )
+        }
+
+        composable(
+            route = SubScreen.CHAT,
+            arguments = listOf(navArgument("questionId") { type = NavType.LongType })
+        ) { backStackEntry ->
+            val questionId = backStackEntry.arguments?.getLong("questionId") ?: 0L
+            ChatScreen(
+                questionId = questionId,
+                navController = navController
+            )
+        }
+
+        composable(SubScreen.MISTAKE_JOURNAL) {
+            MistakeJournalScreen(navController = navController)
+        }
+
     }
 }
