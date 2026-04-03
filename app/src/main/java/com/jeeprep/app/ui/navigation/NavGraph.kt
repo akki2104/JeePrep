@@ -22,6 +22,7 @@ import com.jeeprep.app.ui.screens.pyq.PYQYearsScreen
 import com.jeeprep.app.ui.screens.pyq.PYQPaperScreen
 import com.jeeprep.app.ui.screens.chat.ChatScreen
 import com.jeeprep.app.ui.screens.mistakes.MistakeJournalScreen
+import com.jeeprep.app.ui.screens.premium.PremiumScreen
 
 @Composable
 fun JeePrepNavHost(
@@ -163,5 +164,8 @@ fun JeePrepNavHost(
             MistakeJournalScreen(navController = navController)
         }
 
+        composable(SubScreen.PREMIUM) {
+            PremiumScreen(navController = navController)
+        }
     }
 }
