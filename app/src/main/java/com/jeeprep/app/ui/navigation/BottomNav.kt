@@ -45,6 +45,7 @@ object SubScreen {
     const val MODEL_DOWNLOAD = "model_download"
     const val CHAT = "chat/{questionId}"
     const val MISTAKE_JOURNAL = "mistake_journal"
+    const val PREMIUM = "premium"
 }
 
 val bottomBarScreens = listOf(Screen.Home, Screen.Practice, Screen.Notes, Screen.Progress)
