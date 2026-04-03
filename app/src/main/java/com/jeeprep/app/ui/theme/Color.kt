@@ -32,6 +32,11 @@ val IncorrectRed = Color(0xFFE74C3C)
 val UnattemptedGray = Color(0xFF95A5A6)
 val MarkedBlue = Color(0xFF3498DB)
 
+// Premium colors
+val GoldColor = Color(0xFFD4A017)
+val GoldDarkColor = Color(0xFFB8860B)
+val GoldLightColor = Color(0xFFFFF3C4)
+val ProBadgeColor = Color(0xFFFFD700)
 
 // Background
 val DarkBackground = Color(0xFF121212)
