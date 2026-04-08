@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +7,13 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
 }
+
+// Load Gemini API key from local.properties
+val localProps = Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) load(f.inputStream())
+}
+val geminiApiKey: String = localProps.getProperty("GEMINI_API_KEY", "")
 
 android {
     namespace = "com.jeeprep.app"
@@ -17,6 +26,8 @@ android {
         versionCode = 1
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
     }
 
     buildTypes {
@@ -37,6 +48,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -79,6 +91,9 @@ dependencies {
 
     // LiteRT-LM (Gemma 4 E2B on-device)
     implementation(libs.litertlm.android)
+
+    // OkHttp for Gemini API
+    implementation(libs.okhttp)
 
     // Markdown rendering
     implementation(libs.richtext.commonmark)

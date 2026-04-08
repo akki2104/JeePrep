@@ -13,6 +13,7 @@ hiltNavigationCompose = "1.2.0"
 datastore = "1.1.1"
 coroutines = "1.10.1"
 litertlm = "0.10.0"
+okhttp = "4.12.0"
 richtext = "1.0.0-alpha01"
 junit = "4.13.2"
 
@@ -38,6 +39,7 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.r
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 litertlm-android = { group = "com.google.ai.edge.litertlm", name = "litertlm-android", version.ref = "litertlm" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 richtext-commonmark = { group = "com.halilibo.compose-richtext", name = "richtext-commonmark", version.ref = "richtext" }
 richtext-ui-material3 = { group = "com.halilibo.compose-richtext", name = "richtext-ui-material3", version.ref = "richtext" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
