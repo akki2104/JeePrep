@@ -2,6 +2,7 @@ package com.jeeprep.app.data.repository
 
 import android.util.Log
 import com.jeeprep.app.ai.AiEngine
+import com.jeeprep.app.ai.GeminiApiService
 import com.jeeprep.app.ai.PromptTemplates
 import com.jeeprep.app.data.db.dao.*
 import com.jeeprep.app.data.db.entity.*
@@ -17,7 +18,8 @@ class QuestionRepository @Inject constructor(
     private val topicDao: TopicDao,
     private val userAttemptDao: UserAttemptDao,
     private val bookmarkDao: BookmarkDao,
-    private val aiEngine: AiEngine
+    private val aiEngine: AiEngine,
+    private val geminiApi: GeminiApiService
 ) {
     fun getAllSubjects(): Flow<List<SubjectEntity>> = subjectDao.getAllSubjects()
 
@@ -142,6 +144,23 @@ class QuestionRepository @Inject constructor(
 
     fun isBookmarked(questionId: Long): Flow<Boolean> = bookmarkDao.isBookmarkedFlow(questionId)
     fun getBookmarkedQuestions(): Flow<List<QuestionEntity>> = questionDao.getBookmarkedQuestions()
+
+    // --- Gemini API question download ---
+    val isApiConfigured: Boolean get() = geminiApi.isConfigured
+
+    suspend fun downloadQuestionsFromApi(
+        subject: String,
+        topic: String,
+        topicId: Int,
+        count: Int = 3
+    ): Result<Int> {
+        val result = geminiApi.generateQuestions(subject, topic, count)
+        return result.map { questions ->
+            val withTopicId = questions.map { it.copy(topicId = topicId) }
+            questionDao.insertAll(withTopicId)
+            withTopicId.size
+        }
+    }
 
     // Mock test generation
     suspend fun generateMockTest(examType: String = "Mains"): MockTestEntity? {
