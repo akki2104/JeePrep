@@ -14,6 +14,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.jeeprep.app.ui.navigation.SubScreen
 import com.jeeprep.app.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -102,18 +103,29 @@ fun TopicListScreen(
     }
 
     val uiState by viewModel.uiState.collectAsState()
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    // Show success/error messages
+    LaunchedEffect(uiState.downloadSuccess, uiState.downloadError) {
+        val msg = uiState.downloadSuccess ?: uiState.downloadError
+        if (msg != null) {
+            snackbarHostState.showSnackbar(msg)
+            viewModel.clearMessages()
+        }
+    }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Select Topic") },
+                title = { Text(uiState.subjectName.ifBlank { "Select Topic" }) },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
-        }
+        },
+        snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { padding ->
         if (uiState.isLoading) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -127,7 +139,43 @@ fun TopicListScreen(
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                // Free user download counter
+                if (uiState.isApiConfigured && !uiState.isPremium) {
+                    item {
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                            )
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(12.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Icon(Icons.Filled.CloudDownload, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(20.dp))
+                                Text(
+                                    "Free downloads: ${uiState.remainingFreeDownloads} remaining",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    modifier = Modifier.weight(1f)
+                                )
+                                if (uiState.remainingFreeDownloads == 0) {
+                                    TextButton(
+                                        onClick = { navController.navigate(SubScreen.PREMIUM) },
+                                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                                    ) {
+                                        Text("Go Pro", color = GoldColor, style = MaterialTheme.typography.labelMedium)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 items(uiState.topics) { topic ->
+                    val isDownloading = uiState.downloadingTopicId == topic.id
+
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -140,9 +188,38 @@ fun TopicListScreen(
                                 .fillMaxWidth()
                                 .padding(16.dp),
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Text(topic.name, fontWeight = FontWeight.Medium)
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(topic.name, fontWeight = FontWeight.Medium)
+                            }
+
+                            // Download button
+                            if (uiState.isApiConfigured) {
+                                if (isDownloading) {
+                                    CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+                                } else {
+                                    val canDownload = uiState.isPremium || uiState.remainingFreeDownloads > 0
+                                    IconButton(
+                                        onClick = {
+                                            if (canDownload) {
+                                                viewModel.downloadQuestions(topic.id, topic.name)
+                                            } else {
+                                                navController.navigate(SubScreen.PREMIUM)
+                                            }
+                                        },
+                                        modifier = Modifier.size(36.dp)
+                                    ) {
+                                        Icon(
+                                            if (canDownload) Icons.Filled.CloudDownload else Icons.Filled.Lock,
+                                            contentDescription = "Download questions",
+                                            tint = if (canDownload) MaterialTheme.colorScheme.primary else GoldColor,
+                                            modifier = Modifier.size(20.dp)
+                                        )
+                                    }
+                                }
+                            }
+
                             Icon(Icons.Filled.PlayArrow, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                         }
                     }

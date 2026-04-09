@@ -40,23 +40,116 @@ class PracticeViewModel @Inject constructor(
 // --- Topic List for a Subject ---
 data class TopicListUiState(
     val topics: List<TopicEntity> = emptyList(),
-    val isLoading: Boolean = true
+    val isLoading: Boolean = true,
+    val subjectName: String = "",
+    val isApiConfigured: Boolean = false,
+    val isPremium: Boolean = false,
+    val remainingFreeDownloads: Int = 0,
+    // Per-topic download state
+    val downloadingTopicId: Int? = null,
+    val downloadError: String? = null,
+    val downloadSuccess: String? = null
 )
 
 @HiltViewModel
 class TopicListViewModel @Inject constructor(
-    private val repo: QuestionRepository
+    private val repo: QuestionRepository,
+    private val premiumManager: PremiumManager
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(TopicListUiState())
     val uiState: StateFlow<TopicListUiState> = _uiState.asStateFlow()
 
-    fun loadTopics(subjectId: Int) {
+    private var subjectId: Int = 0
+    private var topicsJob: kotlinx.coroutines.Job? = null
+
+    init {
+        // Collect premium status (ViewModel-scoped, auto-cancelled)
         viewModelScope.launch {
+            premiumManager.isPremium.collect { premium ->
+                _uiState.update { it.copy(isPremium = premium) }
+            }
+        }
+    }
+
+    fun loadTopics(subjectId: Int) {
+        if (this.subjectId == subjectId && !_uiState.value.isLoading.not()) return
+        this.subjectId = subjectId
+        _uiState.update {
+            it.copy(
+                isApiConfigured = repo.isApiConfigured,
+                remainingFreeDownloads = premiumManager.getRemainingFreeDownloads()
+            )
+        }
+        viewModelScope.launch {
+            val subject = repo.getSubjectById(subjectId)
+            _uiState.update {
+                it.copy(
+                    subjectName = subject?.name ?: "",
+                    isApiConfigured = repo.isApiConfigured,
+                    isPremium = premiumManager.isPremium.value,
+                    remainingFreeDownloads = premiumManager.getRemainingFreeDownloads()
+                )
+            }
+        }
+        // Cancel previous topic collection, start new one
+        topicsJob?.cancel()
+        topicsJob = viewModelScope.launch {
             repo.getTopicsBySubject(subjectId).collect { topics ->
                 _uiState.update { it.copy(topics = topics, isLoading = false) }
             }
         }
     }
+
+    fun downloadQuestions(topicId: Int, topicName: String) {
+        val state = _uiState.value
+        if (state.downloadingTopicId != null) return
+
+        if (!state.isApiConfigured) {
+            _uiState.update { it.copy(downloadError = "API not configured.") }
+            return
+        }
+
+        // Check global free download limit
+        if (!state.isPremium && !premiumManager.canDownloadFree()) {
+            _uiState.update { it.copy(downloadError = "Free download limit reached (${PremiumManager.MAX_FREE_DOWNLOADS} questions). Upgrade to Pro for unlimited downloads.") }
+            return
+        }
+
+        _uiState.update { it.copy(downloadingTopicId = topicId, downloadError = null, downloadSuccess = null) }
+
+        viewModelScope.launch {
+            val result = repo.downloadQuestionsFromApi(
+                subject = state.subjectName,
+                topic = topicName,
+                topicId = topicId,
+                count = 3
+            )
+            result.onSuccess { count ->
+                if (!state.isPremium) {
+                    premiumManager.incrementDownloadCount()
+                }
+                _uiState.update {
+                    it.copy(
+                        downloadingTopicId = null,
+                        downloadSuccess = "$count new questions added for $topicName!",
+                        remainingFreeDownloads = premiumManager.getRemainingFreeDownloads()
+                    )
+                }
+            }.onFailure { error ->
+                _uiState.update {
+                    it.copy(
+                        downloadingTopicId = null,
+                        downloadError = error.message ?: "Download failed"
+                    )
+                }
+            }
+        }
+    }
+
+    fun clearMessages() {
+        _uiState.update { it.copy(downloadError = null, downloadSuccess = null) }
+    }
+
 }
 
 // --- Question Session ---
