@@ -204,7 +204,7 @@ fun PremiumScreen(
                 FeatureCard(icon = Icons.Filled.Chat, title = "AI Tutor Chat", desc = "Ask doubts about any question, get instant answers")
                 FeatureCard(icon = Icons.Filled.TrendingUp, title = "AI Weakness Analysis", desc = "Personalized study plan based on your mistakes")
                 FeatureCard(icon = Icons.Filled.School, title = "PYQ College Info", desc = "Know which IIT/NIT set each question")
-                FeatureCard(icon = Icons.Filled.Download, title = "Unlimited Questions", desc = "Download extra practice questions beyond free limit")
+                FeatureCard(icon = Icons.Filled.Download, title = "Unlimited Question Downloads", desc = "Free users limited to 10 downloads. Pro gets unlimited extra questions for every topic.")
                 FeatureCard(icon = Icons.Filled.Analytics, title = "Advanced Analytics", desc = "Topic-wise trends, time analysis & percentile estimate")
 
                 // CTA

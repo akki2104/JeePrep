@@ -17,20 +17,20 @@ class PremiumManager @Inject constructor(
     private val _isPremium = MutableStateFlow(prefs.getBoolean("is_premium", false))
     val isPremium: StateFlow<Boolean> = _isPremium.asStateFlow()
 
-    // Track free question downloads per topic
-    fun getDownloadCountForTopic(topicId: Int): Int =
-        prefs.getInt("downloads_topic_$topicId", 0)
+    // Track total free question downloads (global limit, not per-topic)
+    fun getTotalDownloadCount(): Int =
+        prefs.getInt("total_downloads", 0)
 
-    fun incrementDownloadCount(topicId: Int) {
-        val current = getDownloadCountForTopic(topicId)
-        prefs.edit().putInt("downloads_topic_$topicId", current + 1).apply()
+    fun incrementDownloadCount() {
+        val current = getTotalDownloadCount()
+        prefs.edit().putInt("total_downloads", current + 1).apply()
     }
 
-    fun canDownloadFree(topicId: Int): Boolean =
-        getDownloadCountForTopic(topicId) < FREE_DOWNLOADS_PER_TOPIC
+    fun canDownloadFree(): Boolean =
+        getTotalDownloadCount() < MAX_FREE_DOWNLOADS
 
-    fun getRemainingFreeDownloads(topicId: Int): Int =
-        (FREE_DOWNLOADS_PER_TOPIC - getDownloadCountForTopic(topicId)).coerceAtLeast(0)
+    fun getRemainingFreeDownloads(): Int =
+        (MAX_FREE_DOWNLOADS - getTotalDownloadCount()).coerceAtLeast(0)
 
     fun unlockPremium() {
         prefs.edit().putBoolean("is_premium", true).apply()
@@ -44,7 +44,7 @@ class PremiumManager @Inject constructor(
     }
 
     companion object {
-        const val FREE_DOWNLOADS_PER_TOPIC = 5
+        const val MAX_FREE_DOWNLOADS = 10
         const val PREMIUM_PRICE = "₹50"
         const val PREMIUM_FEATURES = """
 • Detailed step-by-step explanations
@@ -52,7 +52,7 @@ class PremiumManager @Inject constructor(
 • Discuss with AI tutor (unlimited)
 • AI weakness analysis & study plan
 • PYQ college/IIT attribution
-• Download unlimited extra questions
+• Download unlimited extra questions (free users: 10 max)
 • Advanced progress insights
 """
     }

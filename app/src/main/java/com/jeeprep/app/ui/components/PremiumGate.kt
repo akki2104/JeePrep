@@ -79,7 +79,7 @@ fun PremiumBanner(
             Column(modifier = Modifier.weight(1f)) {
                 Text("Upgrade to Pro", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyMedium)
                 Text(
-                    "One-time ${PremiumManager.PREMIUM_PRICE} • No subscription • Offline AI",
+                    "Unlimited downloads • AI explanations • ${PremiumManager.PREMIUM_PRICE} once",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
