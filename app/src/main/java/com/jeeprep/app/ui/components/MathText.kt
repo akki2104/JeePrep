@@ -13,10 +13,21 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+
+// Patterns that indicate text needs WebView rendering (LaTeX or rich markdown)
+private val NEEDS_WEBVIEW_REGEX = Regex(
+    """\$|\\\\[(\[]|\\frac|\\sqrt|\\sum|\\int|\\lim|\\vec|\\hat|\\bar|\\dot|\\overline|\\underline|\\text\{|\\begin|\\end|\\alpha|\\beta|\\gamma|\\delta|\\theta|\\omega|\\pi|\\sigma|\\lambda|\\mu|\\epsilon|\\phi|\\psi|\\chi|\\eta|\\rho|\\tau|\\infty|\\partial|\\nabla|\\times|\\cdot|\\rightarrow|\\leftarrow|\\Rightarrow|\\leq|\\geq|\\neq|\\approx|\\equiv|\\pm|\\mp|\\circ|\\deg|\\angle|\\triangle|\\perp|\\parallel|\^\{|_\{|```|!\["""
+)
+
+private fun needsWebView(text: String): Boolean {
+    return NEEDS_WEBVIEW_REGEX.containsMatchIn(text)
+}
 
 private class WebViewState {
     var pageLoaded = false
@@ -26,6 +37,26 @@ private class WebViewState {
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun MathText(
+    text: String,
+    modifier: Modifier = Modifier
+) {
+    // Fast path: plain text without LaTeX/markdown → use native Text()
+    if (!needsWebView(text)) {
+        Text(
+            text = text,
+            modifier = modifier,
+            style = MaterialTheme.typography.bodyLarge
+        )
+        return
+    }
+
+    // Slow path: WebView for LaTeX/markdown rendering
+    MathTextWebView(text = text, modifier = modifier)
+}
+
+@SuppressLint("SetJavaScriptEnabled")
+@Composable
+private fun MathTextWebView(
     text: String,
     modifier: Modifier = Modifier
 ) {
