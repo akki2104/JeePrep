@@ -71,3 +71,9 @@ build_*.txt
 # OS files
 .DS_Store
 Thumbs.db
+
+# Screenshots / temp images
+WhatsApp*
+*.jpeg
+*.png
+!app/src/main/res/**
